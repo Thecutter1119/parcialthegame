@@ -72,7 +72,7 @@ class Game():
     def __init__(self):
         self.ventana = tk.Tk()
         self.ventana.title("Juego de adivinar")
-        self.ventana.config(width=800, height=600)
+        self.ventana.config(width=750, height=350)
         self.ventana.config(bg="white")
         self.ventana.protocol("WM_DELETE_WINDOW", self.salir)
 
@@ -82,28 +82,35 @@ class Game():
         self.intentos_realizados = 0
         self.rango_maximo = 0
 
-        self.titulo = tk.Label(self.ventana, text="Juego de Adivinar el Número", font=("Arial", 15))
-        self.titulo.place(x=20, y=10)
+        self.titulo = tk.Label(self.ventana, text="→→Juego de Adivinar el Número←←", font=("Arial", 15))
+        self.titulo.place(x=200, y=20)
 
         self.mensaje = tk.Label(self.ventana, text="Introduce el rango máximo para adivinar el número:")
-        self.mensaje.pack(pady=10)
+        self.mensaje.place(x=50, y=100)
 
         self.rango_entry = tk.Entry(self.ventana)
-        self.rango_entry.pack(pady=10)
+        self.rango_entry.place(x=50, y=130, width=200)
         
         self.btniniciar = tk.Button(self.ventana, text="Iniciar Juego", command=self.iniciar_juego)
-        self.btniniciar.pack(pady=10)
+        self.btniniciar.place(x=50, y=160)
 
         self.lblintento = tk.Label(self.ventana, text="Introduce un número para adivinar:")
-        self.lblintento.pack(pady=5)
+        self.lblintento.place(x=50, y=200)
 
         self.intento_entry = tk.Entry(self.ventana)
-        self.intento_entry.pack(pady=5)
+        self.intento_entry.place(x=50, y=230, width=200) 
 
         self.btnintentar = tk.Button(self.ventana, text="Intentar", command=self.probar_intento)
-        self.btnintentar.pack(pady=10)
+        self.btnintentar.place(x=50, y=260)
 
         self.lblintentos = tk.Label(self.ventana, text="")
-        self.lblintentos.pack(pady=10)
+        self.lblintentos.place(x=50, y=300)
         
+
+        self.lbltext =tk.Label(self.ventana, text="Si los intentos son muy pocos debe de tener en cuenta que\ndependiendo del número de complejidad se divide entre 20")
+        self.lbltext.place(x=400, y=100)
+
+        self.lbltext =tk.Label(self.ventana, text="▨▨▨▨▨", font= ("Arial",100))
+        self.lbltext.place(x=400, y=180)
+
         self.ventana.mainloop()
