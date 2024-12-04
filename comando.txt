@@ -1,0 +1,7 @@
+En la elaboracion del parcial para poder subir el repositorio y hacerle sus respectivos cambios se utilizar los siguientes comandos:
+primero cree el repositorio desde la el github y utilizando el control de codigo fuente clone el repositorio tambien podia utilizar 
+la terminal para clonarlo utilizando el git clone y el link de mi resositorio pero preferi la primera opcion.
+luego de clonar los archivos hice un git pull por si no se actualizaban los datos 
+luego hice los respectivos cambios hice un git status para ver el stado del repositorio los cambios sin guardar y demas cosas
+luego hice un git add . para agregar todos los cambios y luego un git commit -m para comentar los cambios 
+luego hice un git push para subir los cambios al repositorio de github.
